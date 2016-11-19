@@ -1,0 +1,4 @@
+﻿@{ 
+    var clock = WorkContext.Resolve<Orchard.Services.IClock>();
+}
+    <div class="credits"><span class="copyright">@T("&#169; Fast Reporter {0}.", clock.UtcNow.Year)</span></div>
