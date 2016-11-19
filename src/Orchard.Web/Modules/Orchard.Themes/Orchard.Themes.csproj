@@ -119,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\orchard.ico" />
+    <Content Include="Content\pfr.ico" />
     <Content Include="Styles\images\menu.themes.png" />
     <Content Include="Styles\images\new.gif" />
     <Content Include="Styles\images\update.gif" />
