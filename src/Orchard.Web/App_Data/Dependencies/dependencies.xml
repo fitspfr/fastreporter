@@ -1815,8 +1815,8 @@
   </Dependency>
   <Dependency>
     <ModuleName>PFRTheme</ModuleName>
-    <VirtualPath>~/Themes/PFRTheme/bin/PFRTheme.dll</VirtualPath>
-    <LoaderName>PrecompiledExtensionLoader</LoaderName>
+    <VirtualPath>~/Themes/PFRTheme/PFRTheme.csproj</VirtualPath>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
     <References />
   </Dependency>
   <Dependency>

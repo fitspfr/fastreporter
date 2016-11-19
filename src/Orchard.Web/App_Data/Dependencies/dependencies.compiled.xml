@@ -398,9 +398,9 @@
   </Dependency>
   <Dependency>
     <ExtensionId>PFRTheme</ExtensionId>
-    <LoaderName>PrecompiledExtensionLoader</LoaderName>
-    <VirtualPath>~/Themes/PFRTheme/bin/PFRTheme.dll</VirtualPath>
-    <Hash>48eee8582eb1cbb1</Hash>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Themes/PFRTheme/PFRTheme.csproj</VirtualPath>
+    <Hash>91c2eebcaa7a1db0</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>SysCache</ExtensionId>
