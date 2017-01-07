@@ -1,0 +1,11 @@
+﻿@model Pfr.Cases.Models.CasePart
+
+<fieldset>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.CaseNumber)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.CaseNumber)
+        @Html.ValidationMessageFor(model => model.CaseNumber)
+    </div>
+</fieldset>

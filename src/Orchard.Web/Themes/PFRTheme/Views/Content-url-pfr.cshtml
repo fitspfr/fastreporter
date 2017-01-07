@@ -1,0 +1,40 @@
+﻿@using Orchard.Utility.Extensions;
+@{
+    if (Model.Title != null) {
+        Layout.Title = Model.Title;
+    }
+
+    Model.Classes.Add("content-item");
+    
+    var contentTypeClassName = ((string)Model.ContentItem.ContentType).HtmlClassify();
+    Model.Classes.Add(contentTypeClassName);
+    
+    var tag = Tag(Model, "article");
+}
+<div id="divYearNav1"></div>
+<script>setYearsDisplay(2013, 'divYearNav1');</script>
+@if (WorkContext.CurrentUser != null)
+{
+    <div>
+        @*<a href='@Url.Action("Create", "Admin", new { ContentType = "Case", ReturnUrl = Context.Request.RawUrl })'>
+            Add new case
+        </a>*@
+        <a href="~/Admin/Contents/Create/Case">Add new case</a>
+    </div>
+}
+@tag.StartElement
+    @*<header>
+        @Display(Model.Header)
+        @if (Model.Meta != null) {
+            <div class="metadata">
+                @Display(Model.Meta)
+            </div>
+        }
+    </header>*@
+    @Display(Model.Content)
+    @if(Model.Footer != null) {
+        <footer>
+            @Display(Model.Footer)
+        </footer>
+    }
+@tag.EndElement

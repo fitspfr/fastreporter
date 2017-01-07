@@ -1,0 +1,15 @@
+@using Orchard.ContentManagement;
+
+@{
+    var userName = ((IContent)Model.ContentItem).As<Orchard.Security.IUser>().UserName;
+    var userEmail = ((IContent)Model.ContentItem).As<Orchard.Security.IUser>().Email;
+}
+  <!-- Profile Head -->
+<div class="profile-head">
+    <h1>@Html.TitleForPage("Profile")</h1>
+    <p class="text-field">User id: @T(userName)</p>
+    <p class="text-field">Email: @T(userEmail)</p>
+    @if(WorkContext.CurrentUser != null && WorkContext.CurrentUser.UserName == userName) {
+        @Html.ActionLink(T("Edit your profile").Text, "Edit")
+    }
+</div>

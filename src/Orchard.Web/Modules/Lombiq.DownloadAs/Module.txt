@@ -1,0 +1,28 @@
+Name: Download as...
+AntiForgery: enabled
+Author: Lombiq
+Website: https://github.com/Lombiq/Orchard-Download-As
+Version: 1.0
+OrchardVersion: 1.10
+Description: Provides users the ability to download content items as a variety of files.
+Features:
+    Lombiq.DownloadAs:
+        Name: Download as...
+        Description: Provides users the ability to download content items as a variety of files. Base feature.
+        Category: Content
+        Dependencies: Piedone.HelpfulLibraries.Utilities
+    Lombiq.DownloadAs.Html:
+        Name: Download as HTML
+        Description: Provides users the ability to download content items as HTML files.
+        Category: Content
+        Dependencies: Lombiq.DownloadAs
+    Lombiq.DownloadAs.Pdf:
+        Name: Download as PDF
+        Description: Provides users the ability to download content items as PDF files. Uses CloudConvert (https://cloudconvert.org).
+        Category: Content
+        Dependencies: Lombiq.DownloadAs
+    Lombiq.DownloadAs.Markdown:
+        Name: Download as Markdown
+        Description: Provides users the ability to download content items as MarkdownPDF files. Uses FuckYeahMarkdown (http://fuckyeahmarkdown.com/).
+        Category: Content
+        Dependencies: Lombiq.DownloadAs

@@ -1,0 +1,13 @@
+@{
+    Orchard.ContentManagement.ContentItem contentItem = Model.ContentPart.ContentItem;
+    string title = Model.Title.ToString();
+}
+
+<h1>@*@Html.ActionLink(T("Edit").Text, "Edit", new { Controller = "Admin", Area = "Contents", Id = Model.ContentItem.Id, ReturnUrl = Context.Request.RawUrl }, new { @class="editImgLink" })
+    &nbsp;*@
+    @if (WorkContext.CurrentUser != null) {
+    <a href='@Url.Action("Edit", "Admin", new { Id = Model.ContentItem.Id, ReturnUrl = Context.Request.RawUrl })'>
+        <img src='/OrchardLocal/Themes/PFRTheme/Content/images/pencil.gif'/>
+    </a>
+    }
+    @Html.ItemDisplayLink(title, contentItem)</h1>

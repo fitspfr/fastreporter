@@ -1,0 +1,10 @@
+﻿@using Orchard.Fields.Settings;
+@using Orchard.Utility.Extensions;
+@{
+    string value = (string)Model.ContentField.Value;
+    if (!string.IsNullOrEmpty(value) && value.StartsWith("http")) 
+    {
+        string name = Model.ContentField.DisplayName;
+        <iframe src="@value" style="width:600px; height:500px;" frameborder="0"></iframe>
+    }
+}

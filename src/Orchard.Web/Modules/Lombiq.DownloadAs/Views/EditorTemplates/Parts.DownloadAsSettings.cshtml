@@ -1,0 +1,13 @@
+﻿@model Lombiq.DownloadAs.Models.DownloadAsSettingsPart
+
+<fieldset>
+    <legend>@T("Download as... Settings")</legend>
+    <ol>
+        <li>
+            @Html.LabelFor(m => m.CacheTimeoutMinutes, T("Cache timeout in minutes"))
+            @Html.TextBoxFor(m => m.CacheTimeoutMinutes, new { @class = "small" })
+            @Html.ValidationMessageFor(m => m.CacheTimeoutMinutes)
+            @Html.Hint(T("Dowload files will be newly generated if this time span has passed. Set as 0 for no caching."))
+        </li>
+    </ol>
+</fieldset>

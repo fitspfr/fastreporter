@@ -1,0 +1,12 @@
+﻿@using Orchard.Utility.Extensions;
+@using Orchard.ContentManagement;
+@{
+    if (Model.Title != null)
+    {
+        Layout.Title = Model.Title;
+    }
+    Orchard.ContentManagement.ContentItem contentItem = Model.ContentPart.ContentItem;
+    string title = Model.Title.ToString();
+}
+<br/>
+@Html.ItemDisplayLink(title, contentItem)

@@ -1,0 +1,13 @@
+﻿Name: Pfr.Cases
+AntiForgery: enabled
+Author: The Orchard Team
+Website: http://orchardproject.net
+Version: 1.0
+OrchardVersion: 1.0
+Description: Handles the cases display and save options for the application
+Features:
+    Pfr.Cases:
+        Name: Cases
+        Description: Adds a set of functionalities to display and edit cases.
+		Category: Application
+        Dependencies: Orchard.Users, Lombiq.DownloadAs

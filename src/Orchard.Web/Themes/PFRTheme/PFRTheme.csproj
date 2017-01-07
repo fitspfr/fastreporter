@@ -73,12 +73,17 @@
   <ItemGroup>
     <Content Include="Assets.json" />
     <Content Include="Assets\Styles.less" />
+    <Content Include="Content\images\email2.png" />
     <Content Include="Content\images\logo.jpg" />
     <Content Include="Content\images\menu.gif" />
     <Content Include="Content\images\menuhover.gif" />
     <Content Include="Content\images\patent_logo.jpg" />
+    <Content Include="Content\images\pdf.jpg" />
+    <Content Include="Content\images\pencil.gif" />
+    <Content Include="Content\images\print2.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\cases.js" />
     <Content Include="Styles\default-grid.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="Web.config" />
@@ -109,6 +114,23 @@
     <Content Include="Views\Branding.cshtml" />
     <Content Include="Views\Document.cshtml" />
     <Content Include="Views\Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Profile.Head.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Content-Case.Detail.cshtml" />
+    <Content Include="Views\Content-Case.Summary.cshtml" />
+    <Content Include="Views\Fields.Input-Case-CaseDecision.cshtml" />
+    <Content Include="Views\Parts\Search.SearchForm.cshtml" />
+    <Content Include="Views\Search\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Parts\DownloadLink-Case.cshtml" />
+    <Content Include="Views\Parts\Title.Summary-Case.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Content-url-pfr.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
