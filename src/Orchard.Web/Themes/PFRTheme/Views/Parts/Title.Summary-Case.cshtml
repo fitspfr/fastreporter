@@ -7,7 +7,7 @@
     &nbsp;*@
     @if (WorkContext.CurrentUser != null) {
     <a href='@Url.Action("Edit", "Admin", new { Id = Model.ContentItem.Id, ReturnUrl = Context.Request.RawUrl })'>
-        <img src='/OrchardLocal/Themes/PFRTheme/Content/images/pencil.gif'/>
+        <img src='/Themes/PFRTheme/Content/images/pencil.gif'/>
     </a>
     }
     @Html.ItemDisplayLink(title, contentItem)</h1>
