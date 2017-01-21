@@ -1,0 +1,33 @@
+﻿@using Orchard.Utility.Extensions;
+@{
+    if (Model.Title != null) {
+        Layout.Title = Model.Title;
+    }
+
+    Model.Classes.Add("content-item");
+    
+    var contentTypeClassName = ((string)Model.ContentItem.ContentType).HtmlClassify();
+    Model.Classes.Add(contentTypeClassName);
+    
+    var tag = Tag(Model, "article");
+}
+@tag.StartElement
+    <header>
+        @*<script>var pfHeaderImgUrl = '';var pfHeaderTagline = '';var pfdisableClickToDel = 0;var pfHideImages = 0;var pfImageDisplayStyle = 'block';var pfDisablePDF = 0;var pfDisableEmail = 0;var pfDisablePrint = 0;var pfCustomCSS = '';var pfBtVersion='1';(function(){var js, pf;pf = document.createElement('script');pf.type = 'text/javascript';if ('https:' === document.location.protocol){js='https://pf-cdn.printfriendly.com/ssl/main.js'}else{js='http://cdn.printfriendly.com/printfriendly.js'}pf.src=js;document.getElementsByTagName('head')[0].appendChild(pf)})();</script><a href="http://www.printfriendly.com" style="color:#6D9F00;text-decoration:none;" class="printfriendly" onclick="window.print();return false;" title="Printer Friendly and PDF"><img style="border:none;-webkit-box-shadow:none;box-shadow:none;" src="http://cdn.printfriendly.com/button-print-blu20.png" alt="Print Friendly and PDF" /></a>*@
+        @Display(Model.Header)
+        @if (Model.Meta != null) {
+            <div class="metadata">
+                @Display(Model.Meta)
+            </div>
+        }
+    </header>
+    <div id="printcasediv">
+    @Display(Model.Content)
+    @if (Model.Footer != null)
+    {
+        <footer>
+            @Display(Model.Footer)
+        </footer>
+    }
+    </div>
+@tag.EndElement

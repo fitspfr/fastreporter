@@ -1,0 +1,15 @@
+﻿@{
+    var part = (Lombiq.DownloadAs.Models.DownloadLinkPart)Model.ContentPart;
+    var workers = (IEnumerable<Lombiq.DownloadAs.Models.IFileBuildWorkerDescriptor>)Model.Workers;
+}
+
+@T("Download as...")
+
+<ul>
+    @foreach (var worker in workers)
+    {
+        <li>
+            @Html.ActionLink(worker.DisplayName.Text, "DownloadAs", new { Controller = "Download", Area = "Lombiq.DownloadAs", Id = part.ContentItem.Id, Extension = worker.SupportedFileExtension })
+        </li>
+    }
+</ul>

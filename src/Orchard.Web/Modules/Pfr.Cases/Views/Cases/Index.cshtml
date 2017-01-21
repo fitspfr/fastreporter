@@ -1,0 +1,9 @@
+﻿@using Orchard.Utility.Extensions;
+@using Orchard.ContentManagement;
+@{
+    if (Model.Title != null)
+    {
+        Layout.Title = Model.Title;
+    }
+}
+@Display(Model)

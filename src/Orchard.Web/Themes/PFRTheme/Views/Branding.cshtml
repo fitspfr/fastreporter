@@ -1,0 +1,36 @@
+﻿@*<h1 id="branding"><a href="@Href("~/")">@WorkContext.CurrentSite.SiteName</a></h1>*@
+@*<h1 id="branding" class="logo">&nbsp;</h1>*@
+@{ 
+    var windowUrl = WorkContext.HttpContext.Request.RawUrl;
+}
+<div class="topMenu" style="text-align:center">
+    @if (windowUrl.ToLower().EndsWith("about"))
+    {
+        <a href="/about" class="topMenuSelected">About</a>
+    }
+    else
+    {
+        <a href="/about" class="topMenu" style="font-weight:bold">About</a>
+    }
+     |
+    @if (windowUrl.ToLower().EndsWith("pfr") || windowUrl.ToLower().Contains("/pfr"))
+    {
+        <a href="/pfr" class="topMenuSelected">PFR</a>
+    }
+    else
+    {
+        <a href="/pfr" class="topMenu" style="font-weight:bold">PFR</a>
+    }
+     |
+    @if (windowUrl.ToLower().EndsWith("/") || windowUrl.ToLower().EndsWith("citation"))
+    {
+        <a href="~/" class="topMenuSelected">Citation</a>
+    }
+    else
+    {
+        <a href="~/" class="topMenu" style="font-weight:bold">Citation</a>
+    }
+</div>
+<div id="divBranding" style="position:relative;left:30%;">
+    <img id="imgBranding" class="logo" src="~/Themes/PFRTheme/Content/images/logo.jpg" style="border-width:0px;">
+</div>

@@ -1,0 +1,8 @@
+Name: PFRTheme
+Author: Sampath Sridhar
+Website: http://www.orchardproject.net
+Description: Custome theme layout for the Fast reporter site
+Version: 1.0
+# todo: provide tags
+Tags: Classic, Serif
+Zones: Header, Navigation, Featured, BeforeMain, AsideFirst, Messages, BeforeContent, Content, AfterContent, AsideSecond, AfterMain, TripelFirst, TripelSecond, TripelThird, FooterQuadFirst, FooterQuadSecond, FooterQuadThird, FooterQuadFourth, Footer
